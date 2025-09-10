@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}acceuil{% endblock %}</title>
+{% block content %}
+
+    <div class="en_tete">
+        <div class="visites" style="text-align:center; margin-bottom:20px;">
+            <strong>Nombre de visites : {{ total_visites }}</strong>
+        </div>
+        {% for acceuil in acceuils %}
+        <h1 class="titre">Bienvenue sur <span class="object">{{acceuil.titre}}</span> </h1>
+        
+        
+        <p class="description">{{acceuil.description}}</p>
+        <p class="disclaimer">{{acceuil.disclaimer}}</p>
+        {% endfor %}
+
+    </div>
+    <!-- <div class="card-container">
+        <div><p>card-1
+
+        </p></div>
+        <div><p>card-2</p></div>
+        <div><p>card-3</p></div>
+        <div><p>card-4</p></div>
+
+    </div> -->
+    
+
+{% endblock %}

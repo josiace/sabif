@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ff7e5f;
+    font-family: 'Arial', sans-serif;
+    padding-top: 60px; /* espace pour la nav fixe */
+}
+nav {
+    background-color: #e16040;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.connect{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    border-radius: 50px;
+    margin-left: 10px;
+    
+}
+.sign_up{
+    background: #150602;
+    padding-left: 10px;
+    /* margin-right: 50px; */
+    border-radius: 20px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+nav a:hover {
+    color: #ffd700;
+}
+footer {
+    background-color: #1a0702;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenu {
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px auto; /* Centrage horizontal */
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.lien{
+
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ff7e5f;
+}
+.titres {
+    text-align: center;
+    color: #ff7e5f;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+.content{
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 10px;
+}
+.auteur , .mail{
+    font-style: italic;
+    color: #844a3b;
+    margin-top: 15px;
+    text-align: right;
+    font-size: 0.9em;
+}
+.date{
+    font-style: italic;
+    color: #bfa37b;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.9em;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffa178;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff7e5f;
+    font-size: 1em;
+} */
+
+/* form button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: #ff7e5f;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+} */
+.titre{
+    text-align: center;
+    color: #e16b4a;
+
+    font-size: 2.5em;
+}
+
+.object{
+    color: #e49c8a;
+}
+
+.en_tete{
+    background: #0d0301;
+    text-align: left;
+    color: #e49c8a;
+
+    font-size: 1.2em;
+    padding: 20px;
+
+}
+.disclaimer{
+    background-color: #e49c8a;
+    font-size: 0.9em;
+    color: #a3523e;
+    text-align: left;
+    margin-top: 0px;
+    padding:20px ;
+    font-style: italic;
+}
+
+form button:hover {
+    background: #a3523e;
+}
+
+
+@media (max-width: 600px) {
+    .contenu {
+        margin: 10px;
+        padding: 15px;
+    }
+    .titres {
+        font-size: 2em;
+    }
+    .content {
+        font-size: 1em;
+    }
+    
+    
+}
+.card-container {
+    background-color:#e16040;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr !important;
+    }
+.card-container > div {
+        background-color: #ff7e5f;
+        border: 2px solid #e16040;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        color: rgb(120, 43, 10);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 500px;
+    }
+.num{
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #9c5b4b;
+}
+
+.card-container > div:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}

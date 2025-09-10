@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Blogs{% endblock %}</title>
+{% block content %}
+    <h1 class="titre">Liste des posts</h1>
+    <form method="get" action="">
+        <input type="text" name="q" placeholder="Rechercher un blog..." value="{{ request.GET.q }}" />
+        <button type="submit">Rechercher</button>
+    </form>
+    <hr>
+    {% for conten in contenus %}
+        <div class="contenu">
+            <h1 class="titres">{{conten.titre}}</h1>
+            {% for img in conten.images.all %}
+                <img src="{{ img.image.url }}" alt="Image du blog" style="max-width:300px; max-height:200px; margin-bottom:10px;" />
+            {% endfor %}
+            <p class="content">{{conten.blog}}</p>
+            <p class="auteur">{{conten.auteur}}</p>
+            <p class="mail">{{conten.mail}}</p>
+            <p class="date">{{conten.date_creation}}</p>
+            <p class="num">numeros: {{conten.num}}</p>
+            <p class="lien">
+                <a  href="{{ conten.lien }}" target="_blank">{{ conten.lien }}</a>
+            </p>
+        </div>
+    {% endfor %}
+{% endblock %}

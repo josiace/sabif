@@ -1,0 +1,81 @@
+body{
+    background: #ff7e5f;
+    font-family: 'Arial', sans-serif;
+    padding-top: 60px; /* espace pour la nav fixe */
+}
+nav {
+    background-color: #e16040;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.connect{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    border-radius: 50px;
+    margin-left: 10px;
+    
+}
+.sign_up{
+    background: #150602;
+    padding-left: 10px;
+    /* margin-right: 50px; */
+    border-radius: 20px;
+    text-align: center;
+}nav a:hover {
+    color: #ffd700;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+footer {
+    background-color: #150602;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+form {
+    height: auto;
+    display: grid;
+    /* justify-content: center;
+    align-items: center; */
+
+    gap: 10px;
+    width: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffa178;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+form input {
+    flex: 1;
+    color: #ff653e;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ff7e5f;
+    font-size: 1em;
+}
+
+form button:hover {
+    background: #a3523e;
+}

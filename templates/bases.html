@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="sabif Shop, boutique de vente en ligne à Bamako, Mali. Découvrez nos produit en vente a bamako, sacs, chaussures tendance à petits prix en franc CFA. Contactez-nous pour vos achats !">
+    <meta name="keywords" content="sabif Shop, boutique, Bamako, Mali, mode, vêtements, sacs, chaussures, franc CFA, femme, shopping, tendance , vente etudiants a bamako , etudiant bamako, ia , petit brix, commerce en ligne a bamako ,commerce en ligne pour etudiant, occasions, occassions en ligne a bamako">
+    <meta name="author" content="sabif Shop Bamako Mali">
+    <link rel="canonical" href="https://tuto-wpag.onrender.com">
+    <meta property="og:title" content="sabif Shop - Boutique à Bamako, Mali">
+    <meta property="og:description" content=" sabif Boutique de mode à Bamako, Mali. Robes, sacs, chaussures tendance en franc CFA.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://tuto-wpag.onrender.com">
+    <meta property="og:image" content="https://tuto-wpag.onrender.com">
+    <!-- Ajout du lien du site dans la description pour le SEO -->
+    <meta name="description" content="sabif Shop, boutique de vente en ligne à Bamako, Mali. Découvrez nos robes, sacs, chaussures tendance , et contenus d'occasion  à petits prix en franc CFA. Contactez-nous pour vos achats ! Visitez notre site :https://tuto-wpag.onrender.com">
+    <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav>
+        <a href="{% url 'acceuil' %}">Acceuil</a>
+        <a href="{% url 'blogs' %}">boutique</a>
+        <div class="connect">
+            <a href="{% url 'connecter' %}">sign in</a>
+             <a class="sign_up" href="{% url 'creer' %}">sign up</a></div>
+        
+        </nav>
+    </header>
+    
+    {% block content %}
+    
+
+    {% endblock %}
+    <footer>
+        <p>&copy; 2025 Mon Site Web. Tous droits réservés create by <a href="https://princejosiace.netlify.app/"> prince josiace</a></p>
+    </footer>
+    
+</body>
+</html>
