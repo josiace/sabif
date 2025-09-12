@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'tuto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sabif_bd',
+        'USER': 'sabif_bd_user',
+        'PASSWORD': 'KZ7ZfO4Vgalrf9Y7KJ8AkQoDT9GGXQCC',
+        'HOST': 'dpg-d31j556r433s73f81i00-a',
+        'PORT': '5432',
     }
 }
 
@@ -132,6 +136,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 
