@@ -6,7 +6,12 @@ services:
       pip install -r requirements.txt
       python manage.py makemigrations
       python manage.py migrate
-    startCommand: gunicorn tuto.wsgi
+
+    startCommand: |
+      python manage.py migrate
+      python manage.py createsuperuser --noinput --username=admin --email=admin@sabif.com
+      gunicorn tuto.wsgi
+
     envVars:
       - key: DATABASE_URL
         fromDatabase:
