@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sabif
+    name: tuto
     env: python
     buildCommand: |
       pip install -r requirements.txt
@@ -10,6 +10,6 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: sabif-bd
+          name: tuto-bd
           property: connectionString
     pythonVersion: 3.11
