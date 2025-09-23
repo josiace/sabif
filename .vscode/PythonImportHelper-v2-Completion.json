@@ -218,6 +218,14 @@
         "documentation": {}
     },
     {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -691,6 +699,15 @@
         "documentation": {}
     },
     {
+        "label": "create_admin",
+        "kind": 2,
+        "importPath": "tuto.startup",
+        "description": "tuto.startup",
+        "peekOfCode": "def create_admin():\n    User = get_user_model()\n    username = os.environ.get(\"DJANGO_SUPERUSER_USERNAME\", \"prince\")\n    email = os.environ.get(\"DJANGO_SUPERUSER_EMAIL\", \"afletounoudouprince5@gmail.com\")\n    password = os.environ.get(\"DJANGO_SUPERUSER_PASSWORD\", \"afletounoudouprince5@gmail\")\n    if not User.objects.filter(username=username).exists():\n        print(\"✅ Création du superutilisateur...\")\n        User.objects.create_superuser(username=username, email=email, password=password)\n    else:\n        print(\"ℹ️ Superutilisateur déjà présent.\")",
+        "detail": "tuto.startup",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "tuto.urls",
@@ -704,7 +721,7 @@
         "kind": 5,
         "importPath": "tuto.wsgi",
         "description": "tuto.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
+        "peekOfCode": "application = get_wsgi_application()\n# Appel du script de création admin\ntry:\n    from .startup import create_admin\n    create_admin()\nexcept Exception as e:\n    print(f\"⚠️ Erreur lors de la création du superutilisateur : {e}\")",
         "detail": "tuto.wsgi",
         "documentation": {}
     },

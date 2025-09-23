@@ -8,7 +8,6 @@ services:
       python manage.py migrate
     startCommand: |
       python manage.py migrate
-      python manage.py shell < tuto/create_admin.py
       gunicorn tuto.wsgi
 
     envVars:
