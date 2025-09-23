@@ -9,7 +9,7 @@ services:
 
     startCommand: |
       python manage.py migrate
-      python manage.py createsuperuser --noinput
+      # python manage.py createsuperuser --noinput
       gunicorn tuto.wsgi
        python manage.py shell < tuto/create_admin.py
     envVars:
