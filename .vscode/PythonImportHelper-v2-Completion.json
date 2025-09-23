@@ -210,6 +210,14 @@
         "documentation": {}
     },
     {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -437,6 +445,42 @@
         "description": "tuto.asgi",
         "peekOfCode": "application = get_asgi_application()",
         "detail": "tuto.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "tuto.create_admin",
+        "description": "tuto.create_admin",
+        "peekOfCode": "User = get_user_model()\nusername = os.environ.get(\"DJANGO_SUPERUSER_USERNAME\", \"prince\")\nemail = os.environ.get(\"DJANGO_SUPERUSER_EMAIL\", \"afletounoudouprince5@gmail.com\")\npassword = os.environ.get(\"DJANGO_SUPERUSER_PASSWORD\", \"afletounoudouprince5@gmail\")\nif not User.objects.filter(username=username).exists():\n    User.objects.create_superuser(username=username, email=email, password=password)",
+        "detail": "tuto.create_admin",
+        "documentation": {}
+    },
+    {
+        "label": "username",
+        "kind": 5,
+        "importPath": "tuto.create_admin",
+        "description": "tuto.create_admin",
+        "peekOfCode": "username = os.environ.get(\"DJANGO_SUPERUSER_USERNAME\", \"prince\")\nemail = os.environ.get(\"DJANGO_SUPERUSER_EMAIL\", \"afletounoudouprince5@gmail.com\")\npassword = os.environ.get(\"DJANGO_SUPERUSER_PASSWORD\", \"afletounoudouprince5@gmail\")\nif not User.objects.filter(username=username).exists():\n    User.objects.create_superuser(username=username, email=email, password=password)",
+        "detail": "tuto.create_admin",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 5,
+        "importPath": "tuto.create_admin",
+        "description": "tuto.create_admin",
+        "peekOfCode": "email = os.environ.get(\"DJANGO_SUPERUSER_EMAIL\", \"afletounoudouprince5@gmail.com\")\npassword = os.environ.get(\"DJANGO_SUPERUSER_PASSWORD\", \"afletounoudouprince5@gmail\")\nif not User.objects.filter(username=username).exists():\n    User.objects.create_superuser(username=username, email=email, password=password)",
+        "detail": "tuto.create_admin",
+        "documentation": {}
+    },
+    {
+        "label": "password",
+        "kind": 5,
+        "importPath": "tuto.create_admin",
+        "description": "tuto.create_admin",
+        "peekOfCode": "password = os.environ.get(\"DJANGO_SUPERUSER_PASSWORD\", \"afletounoudouprince5@gmail\")\nif not User.objects.filter(username=username).exists():\n    User.objects.create_superuser(username=username, email=email, password=password)",
+        "detail": "tuto.create_admin",
         "documentation": {}
     },
     {
