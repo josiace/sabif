@@ -6,12 +6,11 @@ services:
       pip install -r requirements.txt
       python manage.py makemigrations
       python manage.py migrate
-
     startCommand: |
       python manage.py migrate
-      # python manage.py createsuperuser --noinput
+      python manage.py shell < tuto/create_admin.py
       gunicorn tuto.wsgi
-       python manage.py shell < tuto/create_admin.py
+
     envVars:
       - key: DATABASE_URL
         fromDatabase:
